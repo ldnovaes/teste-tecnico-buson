@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  teste-tecnico-buson:
+    build: .
+    ports:
+      - "8080:8080"
+    container_name: teste-tecnico-buson
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod  # acrescentei, como se estivessemos trabalhando com ambientes com o spring
+    restart: always  # se falhou, reinicia
+
